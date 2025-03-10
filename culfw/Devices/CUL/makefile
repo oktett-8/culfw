@@ -69,7 +69,7 @@ CFLAGS += -Wstrict-prototypes
 CFLAGS += -Wundef
 CFLAGS += -Wa,-adhlns=$(<:%.c=$(OBJDIR)/%.lst)
 CFLAGS += -I../../lufa -I../../clib
-CFLAGS += -std=gnu99 -Wno-array-bounds
+CFLAGS += -std=gnu99
 CFLAGS += -Wno-array-bounds
 #CFLAGS += -Wunreachable-code
 GENDEPFLAGS = -MMD -MP -MF .dep/$(@F).d
