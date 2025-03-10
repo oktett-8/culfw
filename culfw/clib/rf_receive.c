@@ -982,10 +982,14 @@ retry_sync:
     b->bitidx  = 7;
     b->data[0] = 0;
     return;
-  } else
-#endif
+  } else  { 
     if(hightime > TSCALE(1600) || lowtime > TSCALE(1600))
       return;
+  }
+#else // -Wmisleading-indentation
+    if(hightime > TSCALE(1600) || lowtime > TSCALE(1600))
+      return;
+#endif
   
     b->zero.hightime = hightime;
     b->zero.lowtime = lowtime;

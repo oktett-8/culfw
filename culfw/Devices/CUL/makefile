@@ -56,6 +56,7 @@ CFLAGS  = -D$(TARGET)
 CFLAGS += -DF_CPU=$(F_CPU)UL
 CFLAGS += -DLUFA $(LUFA_OPTS)
 CFLAGS += -Os
+#CFLAGS += -flto
 CFLAGS += -funsigned-char       #   12 Byte (shorter code)
 CFLAGS += -funsigned-bitfields  #    0
 CFLAGS += -ffunction-sections   # 2600
@@ -68,7 +69,8 @@ CFLAGS += -Wstrict-prototypes
 CFLAGS += -Wundef
 CFLAGS += -Wa,-adhlns=$(<:%.c=$(OBJDIR)/%.lst)
 CFLAGS += -I../../lufa -I../../clib
-CFLAGS += -std=gnu99
+CFLAGS += -std=gnu99 -Wno-array-bounds
+CFLAGS += -Wno-array-bounds
 #CFLAGS += -Wunreachable-code
 GENDEPFLAGS = -MMD -MP -MF .dep/$(@F).d
 ALL_CFLAGS = -mmcu=$(MCU) -I. $(CFLAGS) $(GENDEPFLAGS)

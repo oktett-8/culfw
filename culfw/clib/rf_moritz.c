@@ -106,7 +106,8 @@ rf_moritz_init(void)
   uint8_t cnt = 0xff;
   //Enable RX. Perform calibration first if coming from IDLE and MCSM0.FS_AUTOCAL=1.
   //Why do it multiple times?
-  while(cnt-- && (ccStrobe( CC1100_SRX ) & 0x70) != 1)
+  while(cnt-- &&
+        (ccStrobe(CC1100_SRX) & CC1100_STATUS_STATE_BM) != CC1100_STATE_RX)
     my_delay_us(10);
 
   moritz_on = 1;
