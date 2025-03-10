@@ -70,6 +70,7 @@ CFLAGS += -Wa,-adhlns=$(<:%.c=$(OBJDIR)/%.lst)
 CFLAGS += $(patsubst %,-I%,$(EXTRAINCDIRS))
 CFLAGS += $(CSTANDARD)
 CFLAGS += -mcall-prologues
+CFLAGS += -Wno-array-bounds
 
 
 CPPFLAGS = -g$(DEBUG)
