@@ -2,4 +2,4 @@
 ___
 **The original firmware tree is cloned from [SourceForge](https://sourceforge.net/p/culfw/code/commit_browser).**
 
-_This fork is intended to upgrade the original a-culfw repository to the firmware found at [SourceForge](https://sourceforge.net/p/culfw/code/commit_browser) to be used for future patches. Original purpose is the fix of nanoCUL crashes for **wMBus**. However, the master branch contains the complete source tree up to r571 at SourceForge._
+_This fork is intended to upgrade the original culfw repository to the firmware found at [SourceForge](https://sourceforge.net/p/culfw/code/commit_browser) to be used for future patches. Original purpose is the fix of nanoCUL crashes for **wMBus**. However, the master branch contains the complete source tree up to r571 at SourceForge._
