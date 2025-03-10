@@ -83,7 +83,7 @@ rf_router_func(char *in)
 #endif
 
 #ifdef RFR_FILTER
-  } else if(in[1] == 'f') {      // uiXXYY: set own id to XX and router id to YY
+  } else if(in[1] == 'f') { // ufK01234
     uint8_t i=0;
     while(i < (sizeof(filter)-1) && in[i+2]) {
       filter[i] = in[i+2];

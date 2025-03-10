@@ -58,7 +58,7 @@
 static uint8_t somfy_rts_on = 0;
 typedef uint8_t somfy_rts_frame_t;
 
-const PROGMEM const uint8_t CC1100_SOMFY_RTS_CFG[EE_CC1100_CFG_SIZE] = {
+const PROGMEM uint8_t CC1100_SOMFY_RTS_CFG[EE_CC1100_CFG_SIZE] = {
 // CULFW   IDX NAME     RESET STUDIO COMMENT
 	0x0D,// 00 IOCFG2   *29   *0B    GDO2 as serial output
 	0x2E,// 01 IOCFG1    2E    2E    Tri-State
@@ -197,7 +197,7 @@ static void send_somfy_rts_frame(somfy_rts_frame_t *frame, int8_t hwPulses) {
 	// send inter-frame gap
 	// if last bit = 0, silence is 1/2 symbol longer
 	CC1100_OUT_PORT &= ~_BV(CC1100_OUT_PIN);// Low
-        my_delay_us(30415 + (((frame[6] >> 7) & 1) ? 0 : somfy_rts_interval_half)); # 129341
+        my_delay_us(30415 + (((frame[6] >> 7) & 1) ? 0 : somfy_rts_interval_half)); // 129341
 
 }
 

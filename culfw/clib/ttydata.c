@@ -3,6 +3,7 @@
 #include <avr/pgmspace.h>
 
 void (*input_handle_func)(uint8_t channel);
+void (*output_flush_func)(void);
 
 
 rb_t TTY_Tx_Buffer;

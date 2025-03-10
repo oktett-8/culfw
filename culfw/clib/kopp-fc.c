@@ -107,7 +107,7 @@ uint8_t lastrecblk[MAX_kopp_fc_MSG+1]={0};							// Last Receive Block (to ident
 // Kopp Free-Control Inititalisieren
 // ==================================
 
-const PROGMEM const uint8_t CC1100_Kopp_CFG[EE_CC1100_CFG_SIZE] = {
+const PROGMEM uint8_t CC1100_Kopp_CFG[EE_CC1100_CFG_SIZE] = {
 //  CC1101 Register Initialisation (see CC1101 Page 70ff and 62ff)
 //  Data   				Adr  Reg.Name RESET STUDIO COMMENT
 // ======  				==== ======== ===== ====== =================================================================================================================================
